@@ -5,9 +5,19 @@ var playerCount;
 var allPlayers;
 var distance = 0;
 var database;
+var track;
+var obstacle,obstacle1,obstacle2,obstacle3,obstacle4;
+var spawnObstacles;
 
 var form,player,game;
 var cars,car1,car2,car3,car4;
+var carImg;
+
+function preload(){
+  track = loadImage("track.png");
+  car1Img = loadImage("car1.png");
+  ground = loadImage("ground.png");
+}
 
 function setup(){
   canvas = createCanvas(displayWidth - 20,displayHeight - 30);
@@ -28,4 +38,6 @@ function draw(){
   if(gameState === 2){
     game.end();
   }
+  
 }
+
